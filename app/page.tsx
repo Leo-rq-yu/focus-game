@@ -6,11 +6,11 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-black">
+    <div className="min-h-screen bg-linear-to-br from-purple-900 via-blue-900 to-black">
       {/* Navigation */}
       <nav className="p-6 flex justify-between items-center border-b border-purple-700/30">
         <div className="flex items-center gap-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl font-bold bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
             Focus Game
           </h1>
           <Link
@@ -32,7 +32,7 @@ export default function Home() {
           </SignedOut>
 
           <SignedIn>
-            <UserButton afterSignOutUrl="/" showEmail={true} />
+            <UserButton afterSignOutUrl="/" mode="detailed" />
           </SignedIn>
         </div>
       </nav>
