@@ -14,7 +14,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@insforge/nextjs": "^0.6.7",
+    "@insforge/nextjs": "^0.6.8",
     "@insforge/sdk": "^0.0.56",
     "@tailwindcss/postcss": "^4.1.16",
     "next": "^15.5.6",
