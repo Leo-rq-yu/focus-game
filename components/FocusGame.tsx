@@ -223,7 +223,7 @@ export default function FocusGame() {
         {(gameState === "idle" || gameState === "finished") && (
           <button
             onClick={startGame}
-            className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl font-bold rounded-lg shadow-lg transition-all transform hover:scale-105"
+            className="px-8 py-4 bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-xl font-bold rounded-lg shadow-lg transition-all transform hover:scale-105"
           >
             {gameState === "idle" ? "Start Game" : "Play Again"}
           </button>

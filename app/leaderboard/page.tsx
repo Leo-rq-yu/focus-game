@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { SignedIn, SignedOut, UserButton, useAuth } from '@insforge/nextjs';
+import { SignedIn, SignedOut, UserButton, useUser } from '@insforge/nextjs';
 import { createClient } from '@insforge/sdk';
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ interface LeaderboardEntry {
 }
 
 export default function LeaderboardPage() {
-  const { user } = useAuth();
+  const { user } = useUser();
   const [topScores, setTopScores] = useState<LeaderboardEntry[]>([]);
   const [userScores, setUserScores] = useState<LeaderboardEntry[]>([]);
   const [loading, setLoading] = useState(true);
@@ -176,12 +176,12 @@ export default function LeaderboardPage() {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-black">
+    <div className="min-h-screen bg-linear-to-br from-purple-900 via-blue-900 to-black">
       {/* Navigation */}
       <nav className="p-6 flex justify-between items-center border-b border-purple-700/30">
         <div className="flex items-center gap-8">
           <Link href="/">
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity">
+            <h1 className="text-3xl font-bold bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity">
               Focus Game
             </h1>
           </Link>
@@ -199,7 +199,7 @@ export default function LeaderboardPage() {
           </SignedOut>
 
           <SignedIn>
-            <UserButton afterSignOutUrl="/" showEmail={true} />
+            <UserButton afterSignOutUrl="/" mode="detailed" />
           </SignedIn>
         </div>
       </nav>
@@ -257,7 +257,7 @@ export default function LeaderboardPage() {
           <div className="mt-8 text-center">
             <Link
               href="/"
-              className="inline-block px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg shadow-lg transition-all transform hover:scale-105"
+              className="inline-block px-8 py-3 bg-linear-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-bold rounded-lg shadow-lg transition-all transform hover:scale-105"
             >
               Back to Game
             </Link>
