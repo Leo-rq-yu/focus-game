@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__insforge__fetch-docs",
+      "mcp__insforge__get-backend-metadata",
+      "mcp__insforge__get-table-schema",
+      "mcp__insforge__run-raw-sql",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm init:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm run dev:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(cmd /c \"taskkill /PID 53324 /F\")"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "insforge"
+  ]
+}
