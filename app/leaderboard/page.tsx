@@ -34,7 +34,7 @@ export default function LeaderboardPage() {
   const fetchLeaderboard = async () => {
     try {
       const client = createClient({
-        baseUrl: process.env.NEXT_PUBLIC_INSFORGE_BASE_URL!
+        url: process.env.NEXT_PUBLIC_INSFORGE_BASE_URL,
       });
 
       // Fetch top 50 scores

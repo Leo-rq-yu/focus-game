@@ -106,7 +106,7 @@ export default function FocusGame() {
               console.log("Token exists:", !!token);
 
               const client = createClient({
-                baseUrl: process.env.NEXT_PUBLIC_INSFORGE_BASE_URL!,
+                url: process.env.NEXT_PUBLIC_INSFORGE_BASE_URL,
               });
 
               const { data, error } = await client.database
