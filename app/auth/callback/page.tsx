@@ -22,6 +22,12 @@ function CallbackContent() {
       const name = searchParams.get('name');
       const error = searchParams.get('error');
 
+      console.log('accessToken', accessToken);
+      console.log('userId', userId);
+      console.log('email', email);
+      console.log('name', name);
+      console.log('error', error);
+
       if (error) {
         router.push('/?error=' + encodeURIComponent(error));
         return;
@@ -69,13 +75,13 @@ function CallbackContent() {
         });
 
         // Clean up URL to remove sensitive data from browser history
-        window.history.replaceState({}, '', '/auth/callback');
+        // window.history.replaceState({}, '', '/auth/callback');
 
         // Get destination and redirect
         const destination = sessionStorage.getItem('auth_destination') || '/';
         sessionStorage.removeItem('auth_destination');
 
-        setTimeout(() => router.push(destination), 100);
+        // setTimeout(() => router.push(destination), 100);
       }
     };
 
