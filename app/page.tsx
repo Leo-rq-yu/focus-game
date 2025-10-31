@@ -32,7 +32,15 @@ export default function Home() {
           </SignedOut>
 
           <SignedIn>
-            <UserButton afterSignOutUrl="/" mode="detailed" />
+            <UserButton 
+              afterSignOutUrl="/" 
+              mode="detailed"
+              appearance={{
+                buttonClassName: "hover:bg-white/10 rounded-lg",
+                nameClassName: "text-white font-semibold",
+                emailClassName: "text-gray-300 text-sm"
+              }}
+            />
           </SignedIn>
         </div>
       </nav>
